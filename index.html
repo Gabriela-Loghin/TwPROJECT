@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1 id="logo">Work your body</h1>
+        </div>
+        <div class="login-btn-container">
+            <button id="loginBtn">Login</button>
+        </div> 
+    </header>
+    <main>
+        <section id="optionSection">
+            <form action="#" method="get" id ="main-form">
+                <div class="options">
+                    <div class="no-login">
+                        <label for="inputMasa">
+                            <span>Greutate</span>
+                            <input type="number" name="masa" id="inputMasa">
+                        </label>
+                        <label for="inputVarsta">
+                            <span>Varsta</span>
+                            <input type="number" name="varsta" id="inputVarsta">
+                        </label>
+                        <label for="inputInaltime">
+                            <span>Inaltime ( in cm )</span>
+                            <input type="number" name="inaltime" id="inputInaltime">
+                        </label>
+                        <label for="inputGen">
+                            <span>Gen</span>
+                            <input type="text" name="gen" id="inputGen">
+                        </label>
+                    </div>
+                    <div class="with-login">
+                        <!--inputuri care  apar doar daca userlui este conectat  -->
+                        <label for="inputGrMuschi">
+                            <span>Grupa de muschi dorita</span>
+                            <select name="grMuschi" id="inputGrMuschi">
+                                <option value="">Alege grupa de muschi</option>
+                                <option value="deltoid">Deltoid</option>
+                                <option value="biceps">Biceps</option>
+                                <option value="triceps">Triceps</option>
+                                <option value="cvadriceps_femural">Cvadriceps femural</option>
+                                <option value="fesier">Fesieri</option>
+                                <option value="biceps_femural">Biceps femural</option>
+                                <option value="pectoral">Pectoral</option>
+                                <option value="drept_abdominal">Drept abdominal</option>
+                                <option value="oblic_extern">Oblic extern</option>
+                                <option value="trapez">Trapez</option>
+                                <option value="marele_dorsal">Marele dorsal</option>
+                            </select>
+                        </label>
+                        <label for="inputDurata">
+                            <span>Durata ( in minute )</span>
+                            <input type="number" name="durata" id="inputDurata">
+                        </label>
+                        <label for="inputLocatie">
+                            <span>Locatie</span> 
+                            <select name="locatie" id="inputLocatie">
+                                <option value="">Alegeti locatia</option>
+                                <option value="acasa">Acasa</option>
+                                <option value="aer_liber">Afara</option>
+                            </select>
+                        </label>
+                        <!-- ------ -->
+                    </div>
+                </div>
+                
+                <input type="submit" value="Calculeaza" id="submit-btn">
+            </form>
+        </section>
+        <section id="exerciseDisplay">
+            <div class="exercise-container">
+                <div class="instructions">
+                    <h3 class="exercise-name">Podul cu extensie de picior</h3>
+                    <ul class="exercise-instructions">
+                        <li>stai intinsa pe spate cu genunchii flexati</li>
+                        <li>ridica-ti piciorul pe diagonala</li>
+                        <li>incordeaza-ti fesierii si ridica-ti trunchiul cat de sus poti;</li>
+                        <li>din aceasta pozitie, coboara-ti trunchiul foarte aproape de podea apoi reia;
+                        </li>
+                        <li>exercitiul se executa timp de 45 de secunde, pana la un minut;</li>
+                    </ul>
+                    <div class="exercise-photo-instructions">
+                        <div class="photo-container">
+                            <a href="./images/podul-cu-extensie1.jpg" target="_blank">
+                                <img src="./images/podul-cu-extensie1.jpg" alt="" class="example-photo">
+                            </a>
+                        </div>
+                        <div class="photo-container">
+                            <a href="./images/podul-cu-extensie1.jpg" target="_blank">
+                                <img src="./images/podul-cu-extensie1.jpg" alt="" class="example-photo">
+                            </a>
+                        </div>
+                        <div class="photo-container">
+                            <a href="./images/podul-cu-extensie1.jpg" target="_blank">
+                                <img src="./images/podul-cu-extensie1.jpg" alt="" class="example-photo">
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
