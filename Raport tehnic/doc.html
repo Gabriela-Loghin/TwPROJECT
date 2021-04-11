@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WORKOUT GENERATOR ​RAPORT TEHNIC</title>
+  </head>
+  
+  <body prefix="schema: http://schema.org">
+    <header>
+      <h1 style="color: darkgreen; font: italic;">WORKOUT GENERATOR ​ RAPORT TEHNIC</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Membrii echipei sunt : </dt>
+        <dd typeof="sa:ContributorRole" property="schema:author">
+          <span typeof="schema:Person">
+            <meta property="schema:givenName" content="Gabriela ALina  ">
+						<meta property="schema:familyName" content="Loghin">
+            <a href="https://github.com/Gabriela-Loghin">
+              <span property="schema:name">Gabriela Alina Loghin </span>
+            </a>
+          </span>
+        </dd>
+        <dd typeof="sa:ContributorRole" property="schema:author">
+          <span typeof="schema:Person">
+            <meta property="schema:givenName" content="Dragos">
+						<meta property="schema:familyName" content="Craciun">
+            <a href="https://github.com/dragoscr00">
+              <span property="schema:name">Dragos Craciun</span>
+            </a>
+          </span>
+        </dd>
+
+        <dd typeof="sa:ContributorRole" property="schema:author">
+          <span typeof="schema:Person">
+            <meta property="schema:givenName" content="Alex Vasile">
+						<meta property="schema:familyName" content="Rotaru">
+            <a href="https://github.com/Icedev-234">
+              <span property="schema:name">Dragos Craciun</span>
+            </a>
+          </span>
+        </dd>
+      
+      </dl>
+    </div>
+
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2 style="color: blueviolet;"> 1.Introducere</h2>
+      <h3>1.1 Cerință : </h3>
+      <p>
+        Se doreste a se crea o aplicatie web care sa ofere utilizatorului antrenamente sportive in functie de dimensiunile 
+        pe care le are , in functie de zona corpului pe care vrea sa o lucreze , in functie de durata sau locatie.​
+      </p>
+      <p>
+        Aplicația va salva progresul fiecărui utilizator, fiind salvata o lista cu ordinea utilizatorilor in functie de activitatea fiecaruia.
+      </p>
+    </section>
+    <section id="motivul" role="doc-abstract">
+      <h3>1.2 Motivul alegerii acestui proiect : </h3>
+      <p>
+        Am ales acest proiect prin prisma temei pe care o propune . Sportul este un lucru foarte sanatos , de care ave cu totii nevoie in rutina 
+        noastra zilnica , dar este greu sa ne obisnuim cu el , sa il facem parte din viata noastra , mai ales in vremuri in care nu sunt 
+        deschise salile de sport( #pandemie) sau sa platim antrenori .​ </p>
+      <p>
+        Un alt punct descurajant pt oameni in ceea ce priveste sportul este ceea ce ne dorim sa obtinem prin practicare lui , 
+         proiect ia in vedere obtinerea la distanta de un  singur click a unor exercitii explicate bine care se pliaza 
+         bine pe cerintele si dorintele noastre.</p>
+      </p>
+    </section>
+
+    <section id="scop" role="doc-abstract">
+      <h3>1.3 Scopul aplicatiei : </h3>
+      <p>
+        !!! Scopul aplicatiei noastre este de a oferi o metoda usoara de a face sport eficient in functie 
+        de dorintele utilizatorilor si ceea ce vor sa obtina ei prin practicarea acestei activitati .
+      </p>
+      <p>Aceasta aplicatie este destinata doritorilor de a face sport , dar care nu au timp sau resurse financiare pentru a frecventa sala,sau carepur si simplu vor sa practice acesaste
+        activitate in linistea casei , in intimitate.
+      </p>
+    </section>
+  
+    <section id="structura">
+      <h2 style="color: blueviolet;">2.Structura aplicatiei : </h2>
+      
+        <h3>2.1Pagini :</h3>
+        <p>Aplicatia noastra contine paginile : </p> 
+        <h4>Home</h4>
+        <p> Aceasta este pagina de intrare de unde putem ajunge in toate paginile care vor fi descrise ulterior.
+                 In partea dreapta este continuta o sectiune care cuprinde campuri pentru a introduce aspecte fizice : greutate , 
+                 inaltime , varsta si gen .
+                 In partea stanga exista o sectiune in care se poate selecta durata antrenamentului , locatia ( interior sau exterior),
+                 precum si grupa de muschi care se lucreaza .Prin apasarea butonului "Calculeaza" vor aparea sectiuni care contin explicatii
+                 insotite de fotogrfii / videouri explicative referitoare la antrenamente .
+        </p>
+        <p>  <img src="home.png" width="800" height="600"></p>
+        <h4>Contact</h4>
+        <p>  <img src="contact.png" width="500" height="300"></p>
+        <p>
+           Este o pagina pentru care se gaseste link in partea de sus a paginii "Home" si contine informatii legate de administratorii
+          aplicatiei , chiar si antrenori disponibili sau antrenori de la care au fost inspirate explicatiile , precum si datele acestora de contact.
+          O alta varianta ar fi posibilitatea de a contacta administratorii , direct , prin email , fara a fi afisate datele lor personale.
+        </p>
+        <h4>About</h4>
+        <p> Este o pagina care descrie aplicatia si care ar trebui sa contina lista cu cei mai activi utilizatori , aceasta fiind adaugata 
+          in functie de o baza de date .
+        </p>
+        <p>  <img src="about.png" width="800" height="600"></p>
+        <h4>Login</h4>
+        <p>
+           Este pagina de autentificare prin email si parola.
+        </p>
+        <p>  <img src="login.png" width="500" height="300"></p>
+        <h4>Register</h4>
+        <p>
+          Este pagina de autentificare prin nume , prenume , adresa email , gen , parola , verificare parola printr-un camp de
+           repetare  si prin accepatarea termenilor si conditiilor.
+        </p>
+        <p>  <img src="register.png" width="800" height="600"></p>
+
+        <h3>2.2Butoane :</h3>
+        <h4>Calculeaza </h4>
+        <p> Este butonul care in functie de datele cu care sunt completate campurile mentionate in Home 
+          genereaza sectiuni cu antrenamente.
+        </p>
+        <h4>Login din cadrul paginii Home:</h4>
+        <p> Butonul care ne trimite la pagina de login. </p>
+        <h4>Register din cadrul aplicatiei Home.</h4>
+        <p> Butonul care ne trimite la pagina de register. </p>
+
+        <h4>Login din cadrul paginii Login:</h4>
+        <p>Butonul care trimite datele la baza de date spre verificare si logare. </p>
+        <h4>Register din cadrul aplicatiei Register.</h4>
+        <p> Butonul care trimite datele la baza de date spre inregistrare si updatarea tabelului de useri cu o noua inregistrare. </p>
+      </section>
+
+      <section id="structura">
+        <h2 style="color: blueviolet;">3.Arhitectura aplicatiei : </h2>
+      <p>
+        <figure typeof="sa:image">
+          <img src="diagrama1.png" width="600" height="600" >
+          <figcaption>Fig. 1 - Diagrama UML 1</figcaption>
+        </figure>
+        </p>
+
+        <p>
+          <figure typeof="sa:image">
+            <img src="diagrama2.png" width="600" height="600">
+            <figcaption>Fig. 2- Diagrama UML 2</figcaption>
+          </figure>
+          </p>
+            
+      </section>
+
+   
+      <section id="structura">
+        <h2 style="color: blueviolet;">4.Baza de date  : </h2>
+      <p>
+        Pentru stocarea de date intentionam sa cream o baza de date in SQLDeveloper in care vom avea urmatoarele tabele:
+      </p>
+      <section id="users-table">
+        <h3>Tabelul Users</h3>
+       
+        <p>
+          Acest tabel conține datele despre utilizatorii aplicației. Aceste date sunt cele care sunt completate in pagina de register , fiind lucrat
+          ca si cheie straina emailul.
+        </p>
+      </section>
+      <section id="exercises-table">
+        <h3>Tabelul Exercises</h3>
+    
+        <p>
+          Acest tabel conține date despre exercițiile aplicației. Aici vom incerca sa stocam exercitiile fizice ( antrenamentele) care vor 
+          fi afisate in functie de ceea ce doreste utilizatorul si in functie de dimensiunile sale .Acest lucru se va realiza prin interogari .
+        </p>
+      </section>
+
+      <section id="useri_activi">
+        <h3>Tabelul Activitati</h3>
+        <p>
+          Acest yabel va contine userii cu cea mai mare activitate si vor fi afisati in ordine descrescatoare.
+        </p>
+      </section>
+
+     
+    </section>
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2 style="color: blueviolet;"> 5.Bibliografie:</h2>
+      <p>
+        Fotografiile sunt luate de pe unspash.  => 
+       <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Funsplash.com%2F%3Ffbclid%3DIwAR35dltqEALUkz0odpGOgqNfReui-Q3LJck01P6eEl-sJF6fe1vJvJQjc_k&h=AT0K8bK9gzZ4cOvRYBkA6evwo2x8j8oAiXWE6BBdnNgkJS8e62FlXBZEHbAgHhkqJ_yMfS4o-qsDFbFNgZdB3kTkSFbSNKiNrF1WnhE1dVE95P6khXStbK7PV2qYD3nLhz0tLw"> 
+         unspash </a>  </p>
+      <p>S-a utilizat si w3schools. =>
+
+      <a href="https://www.w3schools.com/?fbclid=IwAR1LY4zbxp9Jrl3B7H4S6NkoDMYNpHXsSbmwQDAV-sQpsgTPou93a8b_Pfk">  w3schools</a></p>
+      </section>
+
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2 style="color: blueviolet;"> 6.Version Control</h2>
+      <p>
+        Ca sistem de version control, am folosit GitHub.
+      </p>
+    
+    </section>
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2 style="color: blueviolet;"> 7.Investitori:</h2>
+      <p>
+      Luand in calcul perioada de pandemie existenta la ora actuala , buni investitori ai acestei aplicatii ar putea fi atat salile de sport care
+      au o activitate redusa sau chiar stopata sau chiar si antrenori personali care isi pot expune antrenamentele pe o astfel de aplicatie .
+      </p>
+    
+    </section>
+  </body>
+</html>
