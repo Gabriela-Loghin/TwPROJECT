@@ -1,4 +1,19 @@
+<?
+session_start();
+if(isset($_SESSION['UsName']))
+{
+  header('location:index.php');
+}
+if(isset($_GET['logout']))
+{
+  session_destroy();
+  unset($_SESSION['UsName']);
+  header('location:index.php');
 
+}
+
+?>
+<?php include('Server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style-reg.css">
-    <title>Document</title>
+    <title>Workout Generator</title>
 </head>
 <body>
 
@@ -24,31 +39,32 @@
             <span>R</span>
         </h1>
         <form action="./Register.php" method="POST">
+        <?php include('errors.php'); ?>
         <div class="Form">
-          <div class="Input">
-            <label>Username</label>
-            <input type="text" class="input" name='UsName' required >
-          </div>
+        <div class="Input">
+              <label>Username</label>
+              <input type="text" class="input" name='UsName'  >
+            </div>
             <div class="Input">
               <label>First Name</label>
-              <input type="text" class="input" required>
+              <input type="text" class="input" name='FN' >
             </div>
             <div class="Input">
                 <label>Last Name</label>
-                <input type="text" class="input" required>
+                <input type="text" class="input" name='LN' >
               </div>
               <div class="Input">
                 <label>Password</label>
-                <input type="password" class="input" required>
+                <input type="password" class="input" name='PASS' >
               </div>
               <div class="Input">
                 <label>Confirm Password</label>
-                <input type="password" class="input" required>
+                <input type="password" class="input" name="Cpass" >
               </div>
               <div class="Input">
                 <label>Gender</label>
                 <div class="Gender_select">
-                    <select required>
+                    <select name='gender' >
                         <option value="">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -59,14 +75,14 @@
               
               <div class="Input">
                 <label>Email Address</label>
-                <input type="email" class="input" required>
+                <input type="email" class="input" name='email' >
               </div>
               <div class="Input">
-                <input type="submit" value="Register" class="btn">
+                <input type="submit" value="Register" class="btn" name='register'>
               </div>
         </div> 
         </form>
-        <h2>If you already have an account...</h2><a href="./login.html">Log In here</a>
+        <h2>If you already have an account...</h2><a href="./login.php">Log In here</a>
         
     </div>
 

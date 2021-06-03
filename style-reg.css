@@ -40,6 +40,11 @@ body{
     letter-spacing: 3px;
     display: inline-block;
 }
+a{
+    font-size: 2em;
+    color:#fec107;
+    font-family:sans-serif;
+}
 
 h1 span{
     animation:light 1.8s linear infinite;

@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("./images//Background_V2.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+nav {
+  width: 100%;
+  background-color: #333;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  margin-left: 5%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #5cbc76;
+  color: white;
+}
+
+  header {
+    min-height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-container {
+    width: 80%;
+    text-align: center;
+  }
+  #logo {
+    color: #eeeef1;
+  }
+  .login-btn-container {
+    width: 20%;
+  }
+  #loginBtn {
+    position:absolute;
+    top:50%;
+    right:40%;
+    width: 7em;
+    height: 3em;
+    border-radius: 1.5em;
+    border: none;
+    background-color: #5cbc76;
+    color: #eeeef1;
+    font-size: large;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  #loginBtn:hover {
+    color: #5cbc76;
+    background-color: #eeeef1;
+  }
+  #optionSection {
+    width: 100%;
+    margin: 5em 0;
+  }
+  #main-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .options {
+    display: flex;
+    justify-content: space-around;
+  }
+  label {
+    margin: 0.5em;
+    display: flex;
+    height: 2.5em;
+  }
+  label span {
+    text-align: center;
+    width: 50%;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: white;
+  }
+  input {
+    width: 50%;
+    border-radius: 0.5em;
+    border: none;
+    text-align: center;
+  }
+  
+  select {
+    border-radius: 0.5em;
+  }
+  
+  .example-photo {
+    border: 1px solid #ddd;
+    border-radius: 0.4px;
+    padding: 0.4px;
+    width: 20em;
+  }
+  
+  .example-photo :hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+  
+  #submit-btn {
+    width: 7em;
+    height: 3em;
+    border-radius: 1.5em;
+    border: none;
+    background-color: #5cbc76;
+    color: #eeeef1;
+    font-size: large;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: auto;
+  }
+  #submit-btn:hover {
+    color: #5cbc76;
+    background-color: #eeeef1;
+  }
+  
+  .exercise-container {
+    background-color: #5cbc76;
+    color: #eeeef1;
+    padding: 1em;
+    border: none;
+    border-radius: 1.5em;
+    margin: 2em 0;
+    display: flex;
+    max-width: 50em;
+  }
+
+  .exercise-name {
+    padding: 0.5em 0;
+    font-size: 2em;
+    text-align: center;
+  }
+  .exercise-instructions {
+    list-style: disc;
+    margin: 1em 0;
+  }
+  .exercise-instructions li {
+    margin: 0.1em 1em;
+    font-size: 1.5em;
+  }
+  .exercise-photo-instructions {
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .photo-container {
+    padding: 1em;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .options {
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+    }
+    .login-btn-container {
+      width: 80%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .logo-container {
+      margin-top: 3em;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    main {
+      margin: 0;
+      width: 100%;
+    }
+    .logo-container {
+      margin-bottom: 3em;
+    }
+    label {
+      margin: 1em 0;
+    }
+    .exercise-instructions li {
+      font-size: 1em;
+    }
+    .example-photo {
+      width: 10em;
+    }
+  
+    label span {
+      text-align: center;
+      width: 50%;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: white;
+    }
+  }
+
+  
+#text h1{
+  position:absolute;
+  top:20%;
+  left:20%;
+  align-items: center;
+  font-size:6em;
+  color:rgb(116, 110, 110);
+  font-family:sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h1 span{
+  animation:light 2s linear infinite;
+}
+
+
+
+@keyframes light{
+  0%,80%{
+      color:rgb(116, 110, 110);
+      text-shadow:none;
+  }
+  100%{
+      color:red;
+      text-shadow: 0 0 10px red,
+                   0 0 20px red,
+                   0 0 40px red,
+                   0 0 80px red,
+                   0 0 120px red,
+                   0 0 160px red;
+  }
+
+}
+#RegisterBtn {
+    position:absolute;
+    top:50%;
+    left:40%;
+  width: 7em;
+  height: 3em;
+  border-radius: 1.5em;
+  border: none;
+  background-color: #5cbc76;
+  color: #eeeef1;
+  font-size: large;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#RegisterBtn:hover {
+  color: #5cbc76;
+  background-color: #eeeef1;
+}
