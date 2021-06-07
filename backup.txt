@@ -128,9 +128,6 @@
                 </div>
             </div>
             
-
-
--------------------------------------------------------------------------
             <div class="exercise-container">
                 <div class="instructions">
                     <h3 class="exercise-name">Flotari</h3>
@@ -153,7 +150,7 @@
                     </div>
                 </div>
             </div>
- --------------------------------------------------------------------------------------------------------------------           
+            
             <div class="exercise-container">
                 <div class="instructions">
                     <h3 class="exercise-name">Genoflexiuni</h3>
@@ -176,7 +173,83 @@
                     </div>
                 </div>
             </div>
-----------------------------------------------------------------------------------------------------
         </section>
-    </main>
-    <footer></footer>
+----------------------------------------------------------------------------------------------------
+         <section id="optionSection">
+            <form action="#" method="get" id ="main-form">
+                <div class="options">
+                    <div class="no-login">
+                        <label for="inputMasa">
+                            <span>Greutate</span>
+                            <input type="number" name="masa" id="inputMasa">
+                        </label>
+                        <label for="inputVarsta">
+                            <span>Varsta</span>
+                            <input type="number" name="varsta" id="inputVarsta">
+                        </label>
+                        <label for="inputInaltime">
+                            <span>Inaltime ( in cm )</span>
+                            <input type="number" name="inaltime" id="inputInaltime">
+                        </label>
+                        <label for="inputGen">
+                            <span>Gen</span>
+                            <input type="text" name="gen" id="inputGen">
+                        </label>
+                    </div>
+                    <div class="with-login">
+                        <!--inputuri care  apar doar daca userlui este conectat  -->
+                        <label for="inputGrMuschi">
+                            <span>Grupa de muschi dorita</span>
+                            <select name="grMuschi" id="inputGrMuschi">
+                                <option value="">Alege grupa de muschi</option>
+                                <option value="deltoid">Deltoid</option>
+                                <option value="biceps">Biceps</option>
+                                <option value="triceps">Triceps</option>
+                                <option value="cvadriceps_femural">Cvadriceps femural</option>
+                                <option value="fesier">Fesieri</option>
+                                <option value="biceps_femural">Biceps femural</option>
+                                <option value="pectoral">Pectoral</option>
+                                <option value="drept_abdominal">Drept abdominal</option>
+                                <option value="oblic_extern">Oblic extern</option>
+                                <option value="trapez">Trapez</option>
+                                <option value="marele_dorsal">Marele dorsal</option>
+                            </select>
+                        </label>
+                        <label for="inputDurata">
+                            <span>Durata ( in minute )</span>
+                            <input type="number" name="durata" id="inputDurata">
+                        </label>
+                        <label for="inputLocatie">
+                            <span>Locatie</span> 
+                            <select name="locatie" id="inputLocatie">
+                                <option value="">Alegeti locatia</option>
+                                <option value="acasa">Acasa</option>
+                                <option value="aer_liber">Afara</option>
+                            </select>
+                        </label>
+                        <!-- ------ -->
+                    </div>
+                </div>
+                
+                <input type="submit" value="Calculeaza" id="submit-btn">
+            </form>
+        </section>
+
+
+<?php 
+session_start();
+if(isset($_SESSION['username']))
+{
+  $_SESSION['msg']="You need to register/login to see this page.";
+  header(location:"index.php");
+}
+
+if(isset($_SESSION['logout']))
+{
+  session_destroy();
+  unset($_SESSION['username']);
+  header(location:"index.php");
+}
+?>
+
+<h1 id="Welcome">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>

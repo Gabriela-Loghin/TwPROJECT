@@ -1,19 +1,6 @@
-<?
-session_start();
-if(isset($_SESSION['UsName']))
-{
-  header('location:index.php');
-}
-if(isset($_GET['logout']))
-{
-  session_destroy();
-  unset($_SESSION['UsName']);
-  header('location:index.php');
 
-}
-
-?>
 <?php include('Server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +26,11 @@ if(isset($_GET['logout']))
             <span>R</span>
         </h1>
         <form action="./Register.php" method="POST">
-        <?php include('errors.php'); ?>
-        <div class="Form">
-        <div class="Input">
+          <?php include('errors.php'); ?>
+         <div class="Form">
+         <div class="Input">
               <label>Username</label>
-              <input type="text" class="input" name='UsName'  >
+              <input type="text" class="input" name='username'  >
             </div>
             <div class="Input">
               <label>First Name</label>
@@ -55,7 +42,7 @@ if(isset($_GET['logout']))
               </div>
               <div class="Input">
                 <label>Password</label>
-                <input type="password" class="input" name='PASS' >
+                <input type="password" class="input" name='password' >
               </div>
               <div class="Input">
                 <label>Confirm Password</label>
@@ -80,7 +67,7 @@ if(isset($_GET['logout']))
               <div class="Input">
                 <input type="submit" value="Register" class="btn" name='register'>
               </div>
-        </div> 
+         </div> 
         </form>
         <h2>If you already have an account...</h2><a href="./login.php">Log In here</a>
         

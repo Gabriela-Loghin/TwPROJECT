@@ -1,3 +1,4 @@
+    
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,8 +17,8 @@
       </div>
     </nav>
 
-     <div class="wrapper">
-       
+     <form class="wrapper" action="./contact.php" method="POST">
+         
 
       <h1>Contact Us</h1>
       
@@ -26,22 +27,18 @@
         <input type="text" class="input">
       </div>
       <div class="Input">
-        <label>Email From</label>
-        <input type="email" class="input">
-      </div>
-      <div class="Input">
         <label>Email To</label>
-        <input type="email" class="input">
+        <input type="email" class="input" name='receiver'>
       </div>
       <div class="Input">
         <label>Message</label>
-        <input type="text" class="input">
+        <input type="text" class="input" name='sms'>
       </div>
       <div class="Input">
-        <input type="submit" value="Send" class="btn">
+        <input type="submit" value="Send" name='send' class="btn">
       </div>
       
-     </div>
+     </form>
 
      <div class="team-members">
        <h1>Our Team</h1>

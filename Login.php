@@ -10,16 +10,21 @@
 </head>
 <body>
     <section class="login-container">
-        <form action="#" method="POST">
-            <label for="email-input">
-                <span>Email</span>
-                <input type="email" name="mail" id="email-input">
+        <form action="./Login.php" method="POST">
+        <?php include('errors.php'); ?>
+            <label>
+                <span>Username</span>
+                <input type="text" name="user" id="email-input">
             </label>
-            <label for="pasword-input">
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" id="email-input">
+            </label>
+            <label>
                 <span>Password</span>
                 <input type="password" name="password" id="pasword-input">
             </label>
-            <input type="submit" value="Login" id="submit-btn" name='login'>
+            <input type="submit" id="submit-btn" name='login'>
             
         </form>
         <h2>Don't have an account?</h2><a href="./Register.php">Sign up here</a>

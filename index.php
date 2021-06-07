@@ -11,7 +11,7 @@
 <body>
     <div class="container" id="text">
         <h1>
-            <span>Work Your Body</span>
+            <span>Workout Generator</span>
         </h1>
       </div>
     <main>
