@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Raport- Workout Generator</title>
+  <link rel="stylesheet" href="raport.css">
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="status">
+        Tehnologii Web 2021
+      </div>
+    </div>
+    <h1>Raport- Workout Generator</h1>
+  </header>
+  <div role="contentinfo">
+    <ol role="directory">
+      <li>
+        <a href="#abstract"><span>1.</span> Abstract</a>
+      </li>
+      <li>
+        <a href="#introducere"><span>2.</span> Introducere</a>
+      </li>
+      <li>
+        <a href="#structura"><span>3.</span> Structură</a>
+        <ol role="directory">
+          <li>
+            <a href="#Root"><span>3.1</span> Pagina principală</a>
+            <ol>
+              <li>
+                <a href="#user"><span>3.1.1</span> Contul utilizatorului</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#javascript"><span>3.2</span> JavaScript</a>
+          </li>
+          <li>
+            <a href="#nodejs"><span>3.3</span> Baze de date</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#contributii"><span>4.</span> Contributii</a>
+      </li>
+      <li>
+        <a href="#referinte"><span>5.</span> Refereinte</a>
+      </li>
+    </ol>
+    <dl>
+      <dt>Autori</dt>
+      <dd>Rotaru Vasile Alexandru, grupa B2<br>
+      Gabriela Login, grupa B2<br>
+      Craciun Dragos, grupa B2</dd>
+    </dl>
+  </div>
+  <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+    <h2>Abstract</h2>
+    <p>Proiectul ales este: <em>Workout Generator</em> (categoria B). Raportul conține specificații referitoare la cerințele principale ale aplicației Web. Sunt menționate aspecte relevante cu privire atât la partea de front-end, cât și la partea de back-end. Aceste aspecte ce țin de structură, limbaje utilizate, dar și lucru în echipă.</p>
+  </section>
+  <section id="introducere" role="doc-introducere">
+    <h2>Introducere</h2>
+    <p><em>Workout Generator</em> este o aplicatie Web care ofera un anumit set de exercitii pe baza preferintei utilizatorului.</p>
+    <p>Datele pe care le poate introduce uitlizatorul consta in:inaltime.tipul de muschi la care se pune accent,greutatea utilizatorului,si altele</p>
+    <p>Daca datele introduse indeplinesc anumite criterii,se da exercitiul potrivit pentru utilizatorul respectiv.</p>
+  </section>
+  <section id="structura">
+    <h2><span>3.</span> Structură</h2>
+    <p>Workout Generator are 4 componente principale: pagina de pornire <em>(frontend/pages/exercise)</em>, pagina destinata comertului de jocuri de familie <em>(game_page/jocuri.php)</em> si pagina aferenta jucariilor <em>(paginajucarii/paginajucarii.php)</em>!</p>
+    <h3>Aplicatia web se porneste din <em>frontend/index.js</em></h3><br>
+    Ulterior, se poate naviga cu usurinta prin toate paginile site-ului cu ajutorul barei de navigatie pozitionata in partea de sus a paginii, dar si cu ajutorul meniului din partea stanga, de asemenea, disponibil in toate paginile.
+    <p>Limbaje folosite pentru front-end: <strong>HTML5, CSS si JavaScript</strong><br>
+    Limbaje folosite pentru back-end: <strong>Node.js</strong></p>
+    <p>Din punct de vedere tehnic, s-a utilizat <em>utf-8 character encoding</em>.</p>
+    <p>Toate paginile sunt <em>responsive</em>.</p>
+    <section id="Root">
+      <h3><span>3.1</span> Pagina principala(Exercise)</h3>
+      <p>Pagina principala contine mai multe seciuni generale: sectiunea exercise, about, contact,top incluse intr-un navigation bar aflat in partea de sus a paginii. Acest navbar se regaseste pe toate paginile aferente aplicatiei web.</p>
+      <p>Aplicatia va permite o filtrare a exercitiilor fizive in functie de</p>
+      <ul>
+        <li>Grupul de muschi</li>
+        <li>Durata exercitiului</li>
+        <li>Unde sa faca exercitiul respectiv</li>
+      </ul>
+      <p>Sectiunea <strong>HOME</strong> reprezinta pagina de start,este de asemenea si pagina in care se realizeaza toata operatia.</p>
+      <p>Sectiunea <strong>ABOUT</strong> contine cateva informatii cu privire la echipa din spatele site-ului. Contine, de asemenea, si un link catre pagina de contact.</p>
+      <p>Pagina <strong>CONTACT</strong> are un formular de contact cu un buton de submit, care odata apasat conduce catre o pagina de confirmare a inregistrarii mesajului. Datele utilizatorului si mesajul acestuia vor fi inserate in baza de date, in tabelul "contact", unde vor putea fi vizualizate de administratorului site-ului</p>
+      <p>Pagina <strong>Top</strong> Este o pagina care ne arata statistica utilizatorilor cei mai activi.<br>
+      Lista poate fi salvata in forma PDF/json si poate fi visualizat de oricare utilizator.</p>
+      <p><strong>My account</strong> conduce la pagina a utilizaotrului unde sunt afisate statistica aceastuia.Acesta consta in mare parte de numarul de exercitii realizate.</p>
+      <p>Butonul din partea dreapta sus a paginii ne ofera noutati din diverse stiri de sport!</p>
+      <section id="user">
+        <h3><span>3.1.1</span> Contul utilizatorului</h3>
+        <p>In sectiune <strong>My account</strong> din bara de navigatie este disponibil un formular prin care un utilizator care inca nu are un cont poate sa isi creeze unul. In momentul in care user-ul isi face cont, acesta este introdus in baza de date in tabelul users.<br>
+        Daca utilizatorul are deja un cont va naviga pana in susul paginii si va apasa pe <em>Log in.</em> (valabil daca intra in paginile Top,About,contact).<br>
+        Ulterior, ii va aparea un formular de login in care trebuie sa completeze email-ul si parola. Conectarea este posibila doar daca utilizatorul are deja cont, adica daca exista deja in baza de date a aplicatiei.</p>
+        <p>O data ce utilizatorul este conectat, se va initia o sesiune prin intermediul careia utilizatorul va fi prezent(conectat) in toate paginile din site si va putea sa introduca date si sa faca exercitii.<br>
+        De asemenea, daca utilizatorul revine in acelasi browser si doreste sa acceseze din nou site-ul, datele sale de conectare vor fi prezente deja in campurile aferente pentru username si parola (utilizarea cookie-urilor).</p>
+      </section>
+    </section>
+    <section id="javascript">
+      <h3><span>3.2</span> Javascript</h3>
+      <p>A fost utilizata limbajul Javascript pentru:</p>
+      <ul>
+        <li>Pagina exercises:ca sa poata dea exercitiul pe baza rezultatelor</li>
+        <li>Pagina Login:pentru a verifica daca email-ul si parola sunt deja in baza de date.</li>
+        <li>Mare parte din functionalitatile paginlor(in afara de about si contact)</li>
+      </ul>
+    </section>
+    <section id="nodejs">
+      <h3><span>3.3</span> Node.js</h3>
+      <p>Pentru stocarea si managementul atat a utilizatorilor, cat si a datelor necesare pentru as afisa exercitiul respectiv. Tabelele sunt:</p>
+      <ul>
+        <li>users - stocheaza toti utilizatorii care au cont</li>
+      </ul>
+    </section>
+    <section id="contributii">
+      <h2><span>4.</span> Contributii</h2>
+      <p>Echipa proiectului <em>Workout Genrator</em> este formata din 3 persoane din grupa B2, respectiv: Rotaru Vasile Alexandru,Loghin Gabriela si Craciun Dragos. S-au realizat urmatoarele:<br>
+      Rotaru Vasile Alexandru a realizat urmatoarele:<br>
+      -gestionarea cu nodejs a utilizatorii<br>
+      -Realizarea paginilor Register,About,Contact<br>
+      -Realizarea fluxului de date RSS<br>
+      Gabriela Login a realizat urmatoarele:<br>
+      -Functionalitatea tuturor paginilor<br>
+      -Realizarea paginilor Login,Exercise,About,Contact,Top,MyAccount<br></p>
+      <p>Raportul a fost realizat impreuna. Ne-am pus de acord cu ce ar trebui sa contina, apoi fiecare a redactat cate o parte din raport, dandu-i push pe git, ulterior.</p>
+      <p>In ceea ce priveste organizarea lucrului in echipa, am lucrat cu ajutorul github, intr-un repository privat la adresa: https://github.com/Gabriela-Loghin/TwPROJECT.git</p>
+      <p><strong>Design-ul</strong> aplicatiei web reprezinta un mix intre ideile discutate impreuna si amprenta fiecareia in paginile la care a lucrat.</p>
+    </section>
+  </section>
+</body>
+</html>
