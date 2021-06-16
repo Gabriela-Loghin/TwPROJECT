@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="top.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+  <script src="top.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <div class="topnav">
+      <a href="../exercises/exercises.html">Exercise</a>
+      <a class="active" href="../top/top.html">Top</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../about/about.html">About</a>
+    </div>
+    <div class="topnav">
+      <a id="notLoggedIn" href="../login/login.html">Login</a>
+      <a id="loggedIn" href="../profile/profile.html">My account</a>
+    </div>
+  </nav>
+  <div class="top">
+    <div>
+      <!-- to do : mai frumoase -->
+      <button id="buttonJson" onclick="loadTopJSON()">
+        See json
+      </button>
+
+      <button onclick="loadTopPDF()">
+        Download pdf
+      </button>
+      <div id=topJson></div>
+    </div>
+  </div>
+</body>
+
+</html>
