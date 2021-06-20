@@ -1,10 +1,12 @@
 const mysql = require("mysql2");
 const { v4: uuidv4 } = require('uuid');
 
+var nodemailer = require('nodemailer');
+
 const con = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "root",
+  user: "daniel",
+  password: "password",
   database: "workout_generator",
 });
 
@@ -28,7 +30,7 @@ function getByEmail(email) {
 
 function login(user) {
   return new Promise((resolve, reject) => {
-    let query = `SELECT * FROM users where email = "${user.email}" and password = "${user.pass}"`
+    let query = `SELECT * FROM users where email = "${user.email}"`
     con.query(query, function (err, result, fields) {
       if (err) throw err;
       if (result.length !== 0) {
@@ -49,13 +51,13 @@ function login(user) {
 
 function register(user) {
   return new Promise((resolve, reject) => {
-    user.imagePath=user.imagePath.replace(/\\/g, '\\\\')
+    console.log(user.imagePath)
+    // user.imagePath=user.imagePath.replace(/\\/g, '\\\\')
       let query = `INSERT INTO users (first_name, last_name, password, email, body_type, age, gender, imagePath ) VALUES ("${
-        user.firstName}", "${user.lastName}", "${user.pass}","${user.email}", ${user.bodyType}, ${user.age},${user.gender}, "${user.imagePath}" )`;
+        user.firstName}", "${user.lastName}", "${user.pass}","${user.email}", ${user.bodyType}, ${user.age},${user.gender}, ${JSON.stringify("")} )`;
       con.query(query, function (err, result, fields) {
         if (err){
             throw err;
-        
         }
         resolve(user);
       });
@@ -121,6 +123,36 @@ function getUserExercises(userID){
   });
 }
 
+function sendEmail(firstName, message, email) {
+  return new Promise(async (resolve, reject) => {
+    var transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      requireTLS: true,
+      auth: {
+        user: "workoutgenerator5@gmail.com",
+        pass: "workoutgenerator1999",
+      },
+    });
+
+    var mailOptions = {
+      from: "workoutgenerator5@gmail.com",
+      to: "gabrielaloghin83@gmail.com",
+      subject: "Email from "+firstName,
+      text: `Message from ${email}: ${message}`,
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        resolve();
+        throw error;
+      } else {
+        resolve("Ok");
+      }
+    });
+  });
+}
 
 module.exports = {
   login,
@@ -129,5 +161,8 @@ module.exports = {
   getByEmail,
   updateUser,
   validateToken,
-  getUserExercises
+  getUserExercises,
+  sendEmail,
 };
+
+
