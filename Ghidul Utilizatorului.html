@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ghidul utilizatorului</title>
+  <link rel="stylesheet" href="raport.css">
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="status">
+        Tehnologii Web 2021
+      </div>
+    </div>
+    <h1>Ghidul utilizaotrului - Workout Generator</h1>
+  </header>
+  <div role="contentinfo">
+    <ol role="directory">
+      <li>
+        <a href="#abstract"><span>1.</span> Abstract</a>
+      </li>
+      <li>
+        <a href="#introducere"><span>2.</span> Introducere</a>
+      </li>
+      <li>
+        <a href="#structura"><span>3.</span> Structură</a> 
+    </ol>
+
+    <dl>
+      <dt>Autori</dt>
+      <dd></dd><br>
+      Gabriela Login, grupa B2<br>
+    </dd>
+    </dl>
+
+  </div>
+  <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+    <h2>Abstract</h2>
+    <p>Proiectul ales este: <em>Workout Generator</em> (categoria B). Ghidul Utilizatorului conține specificații referitoare la modul de utilizare a aplicatiei de catre un user.</p>
+  </section>
+  <section id="introducere" role="doc-introducere">
+    <h2>Introducere</h2>
+    <p><em>Workout Generator</em> este o aplicatie Web care mimează utilitatea unei săli de sport.Putem spune că este o sală de sport virtuală.</p>
+    <p>Pe baza caracteristicilor in care se incadreaza utilizatorului conform datelor sale personale si cerintelor , acesta beneficiaza de un set de exercitii fizice si de anumite rapoarte pe baza carora se poate orienta.</p>
+    
+  </section>
+  <section id="structura">
+    <h2><span>3.</span> Structură</h2>
+    <p>Aplicatia " Workout Generator "  contine urmatoarele pagini : pagina de Home , pagina de Top , pagina de Contact, pagina de Exercitii , pagina de Profil , pagina Register si pagina Login.</p>
+
+    <section id="Root">
+      <h3> Descriere : </h3>
+      <p>Pagina principala contine mai multe seciuni generale: sectiunea exercise, about, contact,top incluse intr-un navigation bar aflat in partea de sus a paginii. Acest navbar se regaseste pe toate paginile aferente aplicatiei web.</p>
+
+      <p>Sectiunea <strong>HOME</strong> reprezinta pagina de about in care se afla primele informatii referitoare la aplicatia noastra , dandu-i utilizatorului cateva informatii introductive pt ca acesta sa isi formeze o idee despre utilitatea aplicatiei.</p>
+
+      <p>Pagina <strong>CONTACT</strong> este o pagina care ajuta utilizatorul in momentele in care are nevoie de mai multe informatii sau intampina neclaritati . Introducand numele , emailul sau si mesajul si apasand butonul de submit , mesajul sau text ajunge la unul dintre adinistratori care primeste pe emailul sau de pe emailul aplicatiei datele introduse de user./p>
+
+      <p>Pagina <strong>TOP</strong> Este o pagina care ne arata statistica utilizatorilor cei mai activi, adica cei care au executat cele mai multe exercitii . De asemenea aceasta statistica poate fi descarcata sub forma de PDF sau Json , apasand pe butoanele din susul paginii "See Json" si "Download PDF".
+      Apoi , tot in aceasta pagina putem vedea doua grafice care ne indica un raport al caloriilor arse de fiecare utilizator si un raport al nr de exercitii executate de fiecae utilizator.
+      </p>
+
+      <p><strong>MY ACCOUNT</strong> conduce la pagina a utilizaotrului unde sunt afisate statistica aceastuia.Acesta consta in mare parte de numarul de exercitii realizate si , asemanator cu pagina de top , contine grafice cu evidenta exercitiilor utilizatorului logat.</p>
+      
+      <p>Pagina <strong>LOGIN</strong> se acceseaza apasand pe sectiunea din partea dreapta , coltul de sus , cu numele de "Account". Avem campuri pt autentificare , si anume un feed pt email si unul pt parola. Pt cazul in care nu avem cont , putem accesa pagina de <strong>REGISTER</strong> care se gaseste la doar un click distanta realizat pe cuvantul "register" din partea de jos a paginii.</p>
+
+      <p>Pagina de <strong>REGISTER</strong> contine mai multe feeduri care trebuie completate cu datele userului , date precum nume , prenume , varsta , inaltime , greutate , parola , email , chiar si poza de profil . Contul va fi inregistrat apasand pe butonul "register", iar inainte de asta trebuie sa bifam sectiunea din dreptul termenilor si conditiilor pt a demonstra ca suntem de acord cu acestea . De mentionat ca pagina de LOGIN contine un buton de "login" care ne trimite datele serverului pt a ne loga , daca avem un cont existent</p>
+      
+      <p>Pagina de <strong>EXERCITII</strong> poate fi accesata doar daca suntem logati ( de asemeni si pagina cu contul personal) , iar , in functie de grupele de muschi pe care le alegem si de celelalte detalii ( durata si locatie) , ni se genereza o serie de exrcitii , conform cerintelor noastre , se incadreaza in locatia si durata alese , iar in urma desfasurarii lor se vor antrena grupele de muschi alese. In josul paginii , avem un buton de "DONE" care imi marcheaza exercitiile ca si terminate , putem termina de mai multe ori o serie de exercitii , iar numarul lor se insumeaza si va fi vizibil in statistica din pagina "my account". Este de mentionat faptul ca fiecare exercitiu are fie poze cu indicatiile desfasurarii , fie filmulet explicativ , precum si indicatii scrise.</p>
+    </section>
+
+  </section>
+</body>
+</html>
